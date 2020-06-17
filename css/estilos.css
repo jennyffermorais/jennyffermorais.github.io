@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  height: 100vh;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: whitesmoke;
+  font-size: 20px;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  transition: background-color 1.5s, color 1.5s;
+}
+
+a {
+  color: rgb(117, 4, 108);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: rgb(117, 4, 108);
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.inicio {
+  display: grid;
+  gap: 50px;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.inicio .imgTitulos {
+  height: 250px;
+  width: 250px;
+
+  object-fit: cover;
+
+  align-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 970px) {
+  .inicio {
+    grid-template-columns: 450px 450px;
+    align-content: center;
+    gap: 2em;
+  }
+
+  .inicio .imgTitulos {
+    height: 441px;
+    width: 441px;
+  }
+
+  .inicio .titulos {
+    padding-top: 180px;
+  }
+}
+
+@media (min-width: 1070px) {
+  .inicio {
+    gap: 7em;
+  }
+
+  .inicio .imgTitulos {
+    margin-top: 3em;
+  }
+}
+
+.site-subtitle,
+.site-title {
+  color: black;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 3em;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.site-subtitle {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  background-color: black;
+  color: white;
+}
+
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em ;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  color: black;
+  /* margin-bottom: 1em;
+  margin-top: 0.3em; */
+  font-size: 3em;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1em;
+}
+
+.sobre p {
+  text-align: justify;
+  margin-bottom: 1.2em;
+}
+
+.sobre a:hover {
+  text-decoration: underline;
+}
+
+.sobre .perfil {
+  float: left;
+  margin-right: 2em;
+}
+
+.perfil img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  text-align: center;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(85vh - 4em - 48px - 1.5em);
+  }
+}
+
+.img-portfolio {
+  margin-bottom: 0.5em;
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.2);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: rgb(117, 4, 108);
+  font-size: 4em;
+}
+
+.contato a:active,
+.contato a:hover {
+  background-color: unset;
+  text-shadow: 0px 0px 10px rgba(117, 4, 108, 0.5);
+}
+
+.footer {
+  background-color: whitesmoke;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.8em;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  list-style: none;
+  margin: 1em;
+}
